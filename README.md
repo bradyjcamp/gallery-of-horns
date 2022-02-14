@@ -1,3 +1,7 @@
+# Gallery of Horns
+
+For this project, I will create a react app that will display images and information of horned animals. The user will be able to filter images and chose favorite images.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

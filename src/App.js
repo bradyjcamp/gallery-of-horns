@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './Header.js'
 import Main from './Main.js'
+import Footer from './Footer.js'
 
 class App extends React.Componet {
   render(){
@@ -10,10 +11,7 @@ class App extends React.Componet {
       <> 
       <Header />
         <Main />
-    <footer>
-      &copy;Brady Camp
-
-    </footer>
+      <Footer />
 
     </>
     );
