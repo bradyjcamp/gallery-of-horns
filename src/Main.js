@@ -2,7 +2,7 @@ import React from 'react';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import HornedBeast from './HornedBeast.js';
-import data from './data.json'
+
 import './Main.css';
 
 class Main extends React.Component {
@@ -10,16 +10,16 @@ class Main extends React.Component {
     return (
       <main>
         <Row xs={1} md={2} lg={3}>
-          {data.map((animal, index) => (
-            <Col>
-              <HornedBeast  
-                key={index}
-                title={animal.title}
-                imageUrl={animal.image_url}
-                description={animal.description}
+          {this.props.data.map((animal, index) => {
+            return(
+            <Col key={index}>
+              <HornedBeast 
+                selectedBeast={animal}
+                handleShowModal={this.props.handleShowModal}
               />
             </Col>
             )
+          }
           )}
         </Row>
       </main>
