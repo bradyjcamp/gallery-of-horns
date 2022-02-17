@@ -13,7 +13,7 @@ For this project, I will create a react app that will display images and informa
 
 ### Reflections and Comments
 
-#### Time Estimates 1
+#### Time Estimates 1 (2/15/2022)
 
 - Number and name of feature: #1: Display Images
 - Estimate of time needed to complete: 1 hour
@@ -21,7 +21,7 @@ For this project, I will create a react app that will display images and informa
 - Finish time: 4:50pm
 - Actual time needed to complete: 45 minutes
 
-#### Time Estimates 2
+#### Time Estimates 2 (2/15/2022)
 
 - Number and name of feature: #2: Allow users to vote for their favorite beast
 - Estimate of time needed to complete: 30 minutes
@@ -29,10 +29,18 @@ For this project, I will create a react app that will display images and informa
 - Finish time: 5:10pm
 - Actual time needed to complete: 20 minutes
 
-#### Time Estimates 3
+#### Time Estimates 3 (2/15/2022)
 
 - Number and name of feature: #3: Bootstrap
 - Estimate of time needed to complete: 1 hour
 - Start time: 6:30pm
 - Finish time: 9:00pm
 - Actual time needed to complete: 2 and a half hours
+
+#### Time Estimates 4 (2/16/2022)
+
+- Number and name of feature: #1: Display a Modal
+- Estimate of time needed to complete: 1 hour
+- Start time: 4:15pm
+- Finish time: 7:00pm
+- Actual time needed to complete: 2 and 35 minutes
