@@ -1,37 +1,38 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card'
+import React from "react";
+import Card from "react-bootstrap/Card";
 
-class HornedBeast extends React.Component{
+class HornedBeast extends React.Component {
   // THIS is how we setup state in a component
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       favorited: 0,
-    }
+    };
   }
 
   handleFavorite = () => {
     this.setState({
       favorited: this.state.favorited + 1,
     });
-  }
+  };
 
   handleAnimalClick = () => {
     this.props.handleShowModal(this.props.selectedBeast);
     this.handleFavorite();
-  }
+  };
 
-  render(){
-    return(
+  render() {
+    return (
       <article>
-        <Card 
-        className="square border border-3 border-primary mx-auto mb-4" 
-        style={{ width: '18rem' }}>
-          <Card.Img 
-            src={this.props.selectedBeast.image_url} 
-            alt={this.props.selectedBeast.description} 
+        <Card
+          className="square border border-3 border-primary mx-auto mb-4"
+          style={{ width: "18rem" }}
+        >
+          <Card.Img
+            src={this.props.selectedBeast.image_url}
+            alt={this.props.selectedBeast.description}
             title={this.props.selectedBeast.title}
-            variant="top" 
+            variant="top"
             onClick={this.handleAnimalClick}
           />
           <Card.Body className="text-center">
@@ -40,8 +41,8 @@ class HornedBeast extends React.Component{
             <Card.Text>{this.props.selectedBeast.description}</Card.Text>
           </Card.Body>
         </Card>
-    </article>
-    );   
+      </article>
+    );
   }
 }
 
