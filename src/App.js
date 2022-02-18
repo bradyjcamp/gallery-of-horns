@@ -1,68 +1,69 @@
-import React from 'react';
-import './App.css';
-import Header from './Header.js';
-import SelectedBeast from './SelectedBeast.js';
-import Main from './Main.js';
-import Footer from './Footer.js';
-import data from './data.json';
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import Modal from "react-bootstrap/Modal"
-
+import React from "react";
+import "./App.css";
+import Header from "./Header.js";
+import SelectedBeast from "./SelectedBeast.js";
+import Main from "./Main.js";
+import Footer from "./Footer.js";
+import data from "./data.json";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       showModal: false,
-      selectedBeast: {}
-    }
+      selectedBeast: {},
+      data: data,
+    };
   }
 
   handleCloseModal = () => {
     this.setState({
-      showModal: false
+      showModal: false,
     });
-  }
+  };
 
-  
   handleShowModal = (selectedBeast) => {
-    // const selectedBeast = data.find(beast => beast.title === name);
     this.setState({
       selectedBeast,
       showModal: true,
     });
-  }
+  };
 
+  handleSelectHorns = (event) => {
+    let selected = event.target.value;
+    if (selected === "one") {
+      let newSelectedBeast = data.filter((beast) => beast.horns === 1);
+      this.setState({ data: newSelectedBeast });
+    } else if (selected === "two") {
+      let newSelectedBeast = data.filter((beast) => beast.horns === 2);
+      this.setState({ data: newSelectedBeast });
+    } else if (selected === "most") {
+      let newSelectedBeast = data.filter((beast) => beast.horns === 100);
+      this.setState({ data: newSelectedBeast });
+    } else {
+      this.setState({ data: data });
+    }
+  };
 
-  render(){
+  render() {
+    console.log("app state", this.state);
     return (
-      <> 
-      <Header />
-      <SelectedBeast
-        handleCloseModal={this.handleCloseModal}
-        showModal={this.state.showModal}
-        selectedBeast={this.state.selectedBeast}
+      <>
+        <Header />
+        <SelectedBeast
+          handleCloseModal={this.handleCloseModal}
+          showModal={this.state.showModal}
+          selectedBeast={this.state.selectedBeast}
+        />
 
-      />
-
-
-      {/* <Modal show ={this.state.showModal} onHide={this.handleCloseModal}>
-        <Modal.Header closeButton>
-          <Modal.Title>{this.state.name}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {this.state.name} is an important part of this community
-        </Modal.Body>
-
-
-      </Modal> */}
-
-
-      <Main 
-      data={data} 
-      handleShowModal={this.handleShowModal}/> 
-      <Footer />
-    </>
+        <Main
+          data={this.state.data}
+          handleShowModal={this.handleShowModal}
+          handleSelectHorns={this.handleSelectHorns}
+        />
+        <Footer />
+      </>
     );
   }
 }
