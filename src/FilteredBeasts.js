@@ -12,6 +12,7 @@ class FilteredBeasts extends React.Component {
               <option value="all">All</option>
               <option value="one">1 horns</option>
               <option value="two">2 horns</option>
+              <option value="three">3 horns</option>
               <option value="most">100 horns</option>
             </Form.Select>
           </Form.Group>

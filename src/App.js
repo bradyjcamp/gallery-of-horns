@@ -38,6 +38,9 @@ class App extends React.Component {
     } else if (selected === "two") {
       let newSelectedBeast = data.filter((beast) => beast.horns === 2);
       this.setState({ data: newSelectedBeast });
+    } else if (selected === "three") {
+      let newSelectedBeast = data.filter((beast) => beast.horns === 3);
+      this.setState({ data: newSelectedBeast }); 
     } else if (selected === "most") {
       let newSelectedBeast = data.filter((beast) => beast.horns === 100);
       this.setState({ data: newSelectedBeast });

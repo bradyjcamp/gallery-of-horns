@@ -17,7 +17,7 @@ class Main extends React.Component {
         <Row xs={1} md={2} lg={3}>
           {this.props.data.map((animal, index) => {
             return (
-              <Col key={index}>
+              <Col key={animal.title}>
                 <HornedBeast
                   selectedBeast={animal}
                   handleShowModal={this.props.handleShowModal}
