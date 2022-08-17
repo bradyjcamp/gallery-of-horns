@@ -25,8 +25,8 @@ class HornedBeast extends React.Component {
     return (
       <article>
         <Card
-          className="square border border-3 border-primary mx-auto mb-4"
-          style={{ width: "18rem" }}
+          className="square border border-3 border-dark mx-auto mb-4"
+          style={{ width: "20rem" }}
         >
           <Card.Img
             src={this.props.selectedBeast.image_url}

@@ -1,8 +1,8 @@
 import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import HornedBeast from "./HornedBeast.js";
-import FilteredBeasts from "./FilteredBeasts.js";
+import HornedBeast from "./components/BeastCards/HornedBeast.js";
+import FilteredBeasts from "./components/FilteredBeasts/FilteredBeasts.js";
 
 import "./Main.css";
 
